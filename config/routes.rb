@@ -1,10 +1,4 @@
 Classportal::Application.routes.draw do
-
-
-  resources :user_courses
-
-  resources :users
-
   resources :student_courses
 
   resources :courses
@@ -15,37 +9,17 @@ Classportal::Application.routes.draw do
 
   resources :admins
 
-  resources :conversations do
-    resources :messages
-  end
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  #root 'admins#index'
-  #root 'sessions#new'
+  root 'admins#index'
 
-  root 'sessions#new'
   get '/login' => 'sessions#new'
-  #get '/rootadmincreate'=> 'users#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
-  get '/user_students'=> 'users#list_students', as: :list_students
-  get '/user_instructors' => 'users#list_instructors', as: :list_instructors
-  get '/admin_home_page' => 'users#admin_home_page', as: :admin_home_page
-
-  get '/signup' => 'users#new', as: :signup
-  get '/student_home_page' =>'users#student_home_page', as: :student_home_page
-
-  get '/instructor_home_page' => 'users#instructor_home_page', as: :instructor_home_page
-  get '/drop_course' => 'users#drop_course', as: :drop_course
-
-  get '/student_enrollment_requests' => 'users#student_enrollment_requests', as: :student_enrollment_requests
-  get '/enroll_student' => 'users#enroll_student', as: :enroll_student
-
-  #get '/add_user_course_rel' =>'users#list_user_course', as: :list_user_courses
+  get '/admin_home_page' => 'admins#home'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

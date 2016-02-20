@@ -1,21 +1,17 @@
-
 class Course < ActiveRecord::Base
+  belongs_to :instructor
 
- validates :course_number, presence:  true, uniqueness: true
-  validates :title, presence: true
- validates :description, presence: true
- validates :start_date, presence: true
- validates :end_date, presence: true
+  has_many :student_courses
+  has_many :students, through: :student_courses
 
-  has_many :user_courses
-  has_many :users, through: :user_courses
+  validates :course_number, :presence=>true
+  validates :title, :presence=>true
+  validates :description, :presence=>true
+  validates :start_date, :presence=>true
+  validates :end_date, :presence=>true
+  validates :status, :presence=>true
+  validates :instructor, :presence=>true
 
- def self.search(search)
-  if search
-   self.where('course_number LIKE ? or title LIKE ? or description LIKE ?', "%#{search}%","%#{search}%","%#{search}%" )
-  else
-   self.all
-  end
- end
+  enum status: [:active, :inactive]
+
 end
-
