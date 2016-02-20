@@ -1,5 +1,6 @@
 require 'test_helper'
 
+
 class CoursesControllerTest < ActionController::TestCase
   setup do
     @course = courses(:one)
@@ -18,7 +19,7 @@ class CoursesControllerTest < ActionController::TestCase
 
   test "should create course" do
     assert_difference('Course.count') do
-      post :create, course: {  }
+      post :create, course: { course_number: @course.course_number, deadlines: @course.deadlines, description: @course.description, end_date: @course.end_date, is_active: @course.is_active, notifications: @course.notifications, start_date: @course.start_date, title: @course.title }
     end
 
     assert_redirected_to course_path(assigns(:course))
@@ -35,7 +36,7 @@ class CoursesControllerTest < ActionController::TestCase
   end
 
   test "should update course" do
-    patch :update, id: @course, course: {  }
+    patch :update, id: @course, course: { course_number: @course.course_number, deadlines: @course.deadlines, description: @course.description, end_date: @course.end_date, is_active: @course.is_active, notifications: @course.notifications, start_date: @course.start_date, title: @course.title }
     assert_redirected_to course_path(assigns(:course))
   end
 
@@ -47,3 +48,4 @@ class CoursesControllerTest < ActionController::TestCase
     assert_redirected_to courses_path
   end
 end
+

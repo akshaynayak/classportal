@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+
+
+<p>
+  <strong>Password:</strong>
+  <%= @user.password %>
+</p>
+
+
+<p>
+  <strong>Is admin:</strong>
+  <%= @user.is_admin %>
+</p>
+
+
+<p>
+  <strong>Is instructor:</strong>
+  <%= @user.is_instructor %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %>
+
+<% if session[:role]=='admin' %>
+<%= link_to 'Back to admin home page', admin_home_page_path %>
+<% end %>
+
+<% if session[:role]=='student' %>
+    <%= link_to 'Back to student home page', student_home_page_path %>
+<% end %>
+
+<% if session[:role]=='instructor' %>
+    <%= link_to 'Back to instructor home page', instructor_home_page_path %>
+<% end %>
+

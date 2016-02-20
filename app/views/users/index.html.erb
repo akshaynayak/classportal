@@ -1,0 +1,65 @@
+<% if logged_in_user.is_admin %>
+    <ul>
+      <h2> USER PROFILE </h2>
+      <li><%= logged_in_user.name %></li>
+      <li><%= logged_in_user.email %></li>
+      <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      <li><%= link_to "Back to home page", admin_home_page_path %></li>
+
+      <li><%= link_to 'Edit your profile details', edit_user_path(logged_in_user) %></li>
+    </ul>
+
+    <h1>Listing users</h1>
+
+<table>
+  <thead>
+    <tr>
+
+      <th>Name</th>
+
+      <th>Email</th>
+
+
+      <th>Is admin</th>
+
+      <th>Is instructor</th>
+
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+
+        <td><%= user.name %></td>
+
+        <td><%= user.email %></td>
+
+
+        <td><%= user.is_admin %></td>
+
+        <td><%= user.is_instructor %></td>
+
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <% if user!=logged_in_user && user.id!=1 %>
+            <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
+
+
+
+<% else %>
+    <ul>
+      <li><%= link_to "Login", 'login' %></a></li>
+    </ul>
+<% end %>
+

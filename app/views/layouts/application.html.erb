@@ -1,22 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Classportal</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
+
+
 </head>
 <body>
 
-<%= yield %>
+
+<div class="ui grid">
+  <div class="row">
+    <div class="fourteen wide centered column">
+      <h2 class="ui header">
+        <i class="mail icon"></i>
+      </h2>
+      <div class="ui purple inverted menu">
+        <% if logged_in_user %>
+            <%= link_to "Mailbox", conversations_path, class: "item" %>
+            <div class="right menu">
+              <%= link_to 'Sign Out', logout_path, class: "item" %>
+            </div>
+        <% else %>
+            <div class="right menu">
+              <%= link_to 'Sign Up', signup_path, class: "item" %>
+              <%= link_to "Sign-In", login_path, class: "item" %>
+            </div>
+        <% end %>
+      </div>
+
+      <%= yield %>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <br>
 <br>
-<%= link_to "Show all admins", admins_path %><br>
-<%= link_to "Show all students", students_path %><br>
-<%= link_to "Show all instructors", instructors_path %><br>
-<%= link_to "Show all courses", courses_path %><br>
-<%= link_to "Show all studentcourses", student_courses_path %><br>
+
+<h2>Footer</h2>
 
 
 

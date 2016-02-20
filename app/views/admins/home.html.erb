@@ -1,8 +1,10 @@
 <% if admin_user %>
     <ul>
+      <h2> USER PROFILE </h2>
+      <li><%= admin_user.name %></li>
       <li><%= admin_user.email %></li>
       <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-      <li><%= link_to 'Edit', edit_admin_path(admin_user) %></li>
+      <li><%= link_to 'Edit your profile details', edit_admin_path(admin_user) %></li>
     </ul>
 
     <h1>Listing admins</h1>
@@ -24,8 +26,7 @@
             <td><%= admin.name %></td>
             <td><%= admin.email %></td>
             <td><%= link_to 'Show', admin %></td>
-            <td><%= link_to 'Edit', edit_admin_path(admin) %></td>
-            <% if admin_user != admin %>
+            <% if admin_user != admin && admin.id!=1%>
             <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% end %>
            </tr>
@@ -36,14 +37,18 @@
     <br>
 
     <%= link_to 'New Admin', new_admin_path %>
-
+    <br><br>
+    <%= link_to "Show all admins", admins_path %><br>
+    <%= link_to "Show all students", students_path %><br>
+    <%= link_to "Show all instructors", instructors_path %><br>
+    <%= link_to "Show all courses", courses_path %><br>
+    <%= link_to "Show all studentcourses", student_courses_path %><br>
 
 
 
 <% else %>
     <ul>
       <li><%= link_to "Login", 'login' %></a></li>
-      <li><%= link_to "Signup", 'signup' %></a></li>
     </ul>
 <% end %>
 

@@ -1,0 +1,63 @@
+<%= form_for(@user_course) do |f| %>
+  <% if @user_course.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user_course.errors.count, "error") %> prohibited this user_course from being saved:</h2>
+
+      <ul>
+      <% @user_course.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+  <div class="field">
+
+
+    <%= f.label :is_teaching %><br>
+    <%= f.check_box :is_teaching %>
+
+
+  </div>
+
+  <div class="field">
+
+
+    <%= f.label :is_enrolled %><br>
+    <%= f.check_box :is_enrolled %>
+
+
+  </div>
+
+  <div class="field">
+
+
+    <%= f.label :has_requested_enrollment %><br>
+    <%= f.check_box :has_requested_enrollment %>
+
+
+  </div>
+
+  <div class="field">
+
+
+    <%= f.label :grade %><br>
+    <%= f.text_field :grade %>
+
+    <div class="field">
+      <%= f.label :user %><br />
+      <%= f.collection_select(:user_id, User.all, :id, :name, { :prompt => 'Select a user', :selected => @user_course.user_id }, { class: 'form-control' }) %>
+    </div>
+
+    <div class="field">
+      <%= f.label :course %><br />
+      <%= f.collection_select(:course_id, Course.all, :id, :course_number, { :prompt => 'Select a course', :selected => @user_course.course_id }, { class: 'form-control' }) %>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

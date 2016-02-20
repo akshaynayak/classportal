@@ -1,0 +1,73 @@
+<% if logged_in_user.is_admin %>
+    <ul>
+      <h2> USER PROFILE </h2>
+      <li><%= logged_in_user.name %></li>
+      <li><%= logged_in_user.email %></li>
+      <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      <li><%= link_to 'Edit your profile details', edit_user_path(logged_in_user) %></li>
+      <li><%= link_to "Admin home page", admin_home_page_path %></li>
+
+    </ul>
+
+
+    <h1>Listing admins</h1>
+
+    <table>
+      <thead>
+      <tr>
+
+        <th>Name</th>
+
+        <th>Email</th>
+
+        <th>Is admin</th>
+
+        <th>Is instructor</th>
+
+        <th colspan="3"></th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <% @admins.each do |admin| %>
+          <tr>
+
+            <td><%= admin.name %></td>
+
+            <td><%= admin.email %></td>
+
+            <td><%= admin.is_admin %></td>
+
+            <td><%= admin.is_instructor %></td>
+
+            <td><%= link_to 'Show', admin %></td>
+            <td><!%= link_to 'Edit', edit_user_path(admin) %></td>
+            <% if admin!=logged_in_user && admin.id!=1 %>
+            <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% end %>
+                </tr>
+      <% end %>
+      </tbody>
+    </table>
+
+    <br>
+
+    <%= link_to 'New Instructor/Admin', new_user_path %>
+
+    <br><br>
+    <!%= link_to "Show all admins", user_admins_path %><br>
+    <%= link_to "Manage students", list_students_path %><br>
+    <%= link_to "Manage instructors", list_instructors_path %><br>
+    <%= link_to "Manage courses", courses_path %><br>
+    <%= link_to "View all users", users_path %><br>
+
+    <%= link_to "Show user course history", user_courses_path %><br>
+
+
+<% else %>
+    <ul>
+
+      <li><%= link_to "Login", 'login' %></a></li>
+    </ul>
+<% end %>
+

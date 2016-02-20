@@ -1,34 +1,72 @@
 <p id="notice"><%= notice %></p>
 
+
 <p>
   <strong>Course number:</strong>
   <%= @course.course_number %>
 </p>
+
 
 <p>
   <strong>Title:</strong>
   <%= @course.title %>
 </p>
 
+
 <p>
   <strong>Description:</strong>
   <%= @course.description %>
 </p>
+
 
 <p>
   <strong>Start date:</strong>
   <%= @course.start_date %>
 </p>
 
+
 <p>
   <strong>End date:</strong>
   <%= @course.end_date %>
 </p>
 
+
 <p>
-  <strong>Status:</strong>
-  <%= @course.status %>
+  <strong>Is active:</strong>
+  <%= @course.is_active %>
 </p>
 
+
+<p>
+  <strong>Notifications:</strong>
+  <%= @course.notifications %>
+</p>
+
+
+<p>
+  <strong>Deadlines:</strong>
+  <%= @course.deadlines %>
+</p>
+
+<p>
+  <strong>Instructor:</strong>
+<% @course.users.each do |user| %>
+    <% if user.is_instructor %>
+        <li><%= user.name %></li>
+    <% end %>
+<% end %>
+</p>
+<% if logged_in_user.is_admin %>
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
+
+<% end %>
+
+<% if logged_in_user.is_admin==false and logged_in_user.is_instructor==false %>
+<%= link_to 'Back to student home page', student_home_page_path %>
+<% end %>
+
+<% if logged_in_user.is_instructor==true %>
+    <%= link_to 'Back to instructor home page', instructor_home_page_path %>
+<% end %>
+

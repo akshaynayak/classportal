@@ -1,0 +1,4 @@
+
+module UserCoursesHelper
+end
+

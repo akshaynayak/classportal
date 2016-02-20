@@ -4,7 +4,28 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
+
     @courses = Course.all
+    @a = Course.search(params[:search]) if params[:search].present?
+
+    @instructors = User.search(params[:search]) if params[:search].present?
+
+    if @instructors
+      @instructors.each do |x|
+      @b=x.courses
+      end
+    end
+    if @a
+      @courses=@a
+      if @b
+        @courses=@courses+@b
+      end
+    elsif @b
+        @courses=@b
+    end
+
+    #@instructors=User.where(:is_admin=>false, :is_instructor=>true)
+    #@instructors.
   end
 
   # GET /courses/1
@@ -28,7 +49,7 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
-        format.html { redirect_to @course, notice: 'Course was successfully created.' }
+        format.html { redirect_to @course, notice: 'Course was successfully created. Add instructor by going to user courses tab on admin page' }
         format.json { render action: 'show', status: :created, location: @course }
       else
         format.html { render action: 'new' }
@@ -61,6 +82,10 @@ class CoursesController < ApplicationController
     end
   end
 
+
+
+
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_course
@@ -69,6 +94,6 @@ class CoursesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def course_params
-      params.require(:course).permit(:course_number, :title, :description, :start_date, :end_date, :status, :instructor_id)
+      params.require(:course).permit(:course_number, :title, :description, :start_date, :end_date, :is_active, :notifications, :deadlines)
     end
 end

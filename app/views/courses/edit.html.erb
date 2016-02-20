@@ -4,3 +4,13 @@
 
 <%= link_to 'Show', @course %> |
 <%= link_to 'Back', courses_path %>
+
+
+<% if logged_in_user.is_admin==false and logged_in_user.is_instructor==false %>
+    <%= link_to 'Back to student home page', student_home_page_path %>
+<% end %>
+
+<% if logged_in_user.is_instructor==true %>
+    <%= link_to 'Back to instructor home page', instructor_home_page_path %>
+<% end %>
+

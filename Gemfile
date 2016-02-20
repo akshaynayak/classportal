@@ -5,8 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', :git => 'git://github.com/rails/rails.git', :tag => 'v4.1.0.beta1'
 
 # Use sqlite3 as the database for Active Record
-#gem 'pg'
-gem 'sqlite3'
+gem 'pg'
+gem 'activerecord-jdbcpostgresql-adapter'
+#gem 'sqlite3'
 #gem 'mysql2'
 #gem 'mysql2', '~> 0.3.18'
 
@@ -54,3 +55,7 @@ gem 'bcrypt-ruby'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+
+gem 'seed_dump'
+
+gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass', branch: 'v1.0beta'

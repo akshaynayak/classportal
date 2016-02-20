@@ -1,7 +1,7 @@
 class AdminsController < ApplicationController
   before_action :set_admin, only: [:show, :edit, :update, :destroy]
 
-  before_action :require_admin_user, only: [:index, :show, :home]
+  before_action :require_admin_user, only: [:new, :index, :show, :home, :edit, :create, :destroy]
 
   # GET /admins
   # GET /admins.json
@@ -58,7 +58,7 @@ class AdminsController < ApplicationController
   def destroy
     @admin.destroy
     respond_to do |format|
-      format.html { redirect_to admins_url }
+      format.html { redirect_to admin_home_page_url }
       format.json { head :no_content }
     end
   end

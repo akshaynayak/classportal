@@ -1,0 +1,50 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+
+one:
+
+
+  is_teaching: false
+
+
+
+
+  is_enrolled: false
+
+
+
+
+  has_requested_enrollment: false
+
+
+
+
+  grade: MyString
+
+
+
+
+two:
+
+
+  is_teaching: false
+
+
+
+
+  is_enrolled: false
+
+
+
+
+  has_requested_enrollment: false
+
+
+
+
+  grade: MyString
+
+
+
+
+

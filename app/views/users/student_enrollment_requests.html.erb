@@ -1,0 +1,48 @@
+<h1>Listing user_courses</h1>
+
+<table>
+  <thead>
+  <tr>
+
+    <th> User </th>
+
+    <th> course </th>
+
+    <th>Is teaching</th>
+
+    <th>Is enrolled</th>
+
+    <th>Has requested enrollment</th>
+
+    <th>Grade</th>
+
+    <th colspan="3"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @students_enrollment_requests.each do |user_course| %>
+      <tr>
+        <td><%= user_course.user_id %></td>
+
+        <td><%= user_course.course_id %></td>
+
+        <td><%= user_course.is_teaching %></td>
+
+        <td><%= user_course.is_enrolled %></td>
+
+        <td><%= user_course.has_requested_enrollment %></td>
+
+        <td><%= user_course.grade %></td>
+
+        <td><%= link_to 'Show', user_course %></td>
+        <td><%= link_to 'Edit', edit_user_course_path(user_course) %></td>
+        <td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Back to instructor home page', instructor_home_page_path %>
