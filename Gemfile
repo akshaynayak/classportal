@@ -5,8 +5,7 @@ source 'https://rubygems.org'
 gem 'rails', :git => 'git://github.com/rails/rails.git', :tag => 'v4.1.0.beta1'
 
 # Use sqlite3 as the database for Active Record
-gem 'pg'
-#gem 'sqlite3'
+gem 'sqlite3'
 #gem 'mysql2'
 #gem 'mysql2', '~> 0.3.18'
 
