@@ -21,6 +21,8 @@ gem 'heroku'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
+gem 'rails_12factor', group: :production
+
 #Resolving TZInfo::DataSourceNotFound Errors
 gem 'tzinfo-data'
 
