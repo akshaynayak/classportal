@@ -1,10 +1,3 @@
-Admin.create!([
-  {name: "root", email: "root@ncsu.edu", password_digest: "rubyonrailsrocks"},
-  {name: "Akshay Nayak", email: "anayakv@ncsu.edu", password_digest: "$2a$10$eai01K/KfFtnPyWe6IQRJOyCchTZfw0Gn0HPdGT5WdybeNECaBk6a"},
-  {name: "hayley", email: "h@gmail.com", password_digest: nil},
-  {name: "Tony Stark!!!", email: "tony@avengers.com", password_digest: "$2a$10$bgB3PxvZ5hJh73UZPceLeuHDpFoeR.NnAr2KVkMH4Zo/fRec7gtj2"},
-  {name: "manisha", email: "mr@ncsu.edu", password_digest: "$2a$10$gPRwWuygxqLI8K42vFRgveO5wP.KMSQbIuBsajSIkbzakUGG7yHci"}
-])
 Course.create!([
   {course_number: "csc 591-003", title: "ADBI", description: "algorithms for bi", start_date: "2016-01-12", end_date: "2016-05-17", is_active: true, notifications: "enrollment date closed", deadlines: "project 4 due on 24"},
   {course_number: "csc 517", title: "ood", description: "oodd", start_date: "2016-01-17", end_date: "2016-04-17", is_active: true, notifications: "rails project due", deadlines: ""},
@@ -12,15 +5,6 @@ Course.create!([
   {course_number: "csc 501", title: "Operating Systems", description: "OS", start_date: "2016-01-12", end_date: "2016-06-17", is_active: true, notifications: "threading library due", deadlines: ""},
   {course_number: "csc 522", title: "alda", description: "data mining", start_date: "2016-01-11", end_date: "2016-06-19", is_active: true, notifications: "project proposal due", deadlines: ""},
   {course_number: "csc 520", title: "ai", description: "artificial intelligence", start_date: "2016-01-19", end_date: "2016-05-19", is_active: true, notifications: "", deadlines: ""}
-])
-Instructor.create!([
-  {name: "ed gehringer", email: "edg@ncsu.edu", password_digest: nil},
-  {name: "stefen heber", email: "sheber@ncsu.edu", password_digest: nil},
-  {name: "nagiza samatova", email: "ng@ncsu.edu", password_digest: "$2a$10$r19iNKmtjAMnC3IfyEOFOuP/75qY5WqCcWH/426k4bo0Tlnv.3ePq"}
-])
-Student.create!([
-  {name: "akshay", email: "abc@", password_digest: nil},
-  {name: "ben", email: "ben@ncsu.edu", password_digest: "$2a$10$Mg03OZ0Uqh9wJKprFuysoOTg2NRdNuXNLqTMhQshZ2PzmEnvsAoiW"}
 ])
 User.create!([
   {name: "root", email: "admin@ncsu.edu", is_admin: true, is_instructor: false, password_digest: "$2a$10$NhbxArRDjYK460Q2ZKRa1OvnKA1HRYVk2RupTt4Ub7jWpk2uSTxje"},
