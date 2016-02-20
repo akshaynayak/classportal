@@ -12,7 +12,7 @@ class Course < ActiveRecord::Base
 
  def self.search(search)
   if search
-   self.where('course_number LIKE ? or title LIKE ? or description LIKE ?', "%#{search}%","%#{search}%","%#{search}%" )
+   self.where('course_number LIKE ? or title LIKE ? or description LIKE ? or is_active = ?', "%#{search}%","%#{search}%","%#{search}%","%#{search}%" )
   else
    self.all
   end

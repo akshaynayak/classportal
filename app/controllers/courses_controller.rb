@@ -4,6 +4,18 @@ class CoursesController < ApplicationController
   # GET /courses
   # GET /courses.json
   def index
+    if params[:search].present?
+      if params[:search]=='active'
+        @courses= Course.where('is_active = ?', true)
+        return @courses
+      end
+    end
+    if params[:search].present?
+      if params[:search]=='inactive'
+        @courses= Course.where('is_active = ?', false)
+        return @courses
+      end
+    end
 
     @courses = Course.all
     @a = Course.search(params[:search]) if params[:search].present?

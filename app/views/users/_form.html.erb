@@ -42,6 +42,7 @@
 
   <div class="field">
 
+    <% if session[:role]!='student' %>
 
     <%= f.label :is_admin %><br>
     <%= f.check_box :is_admin %>
@@ -57,6 +58,7 @@
 
 
   </div>
+    <% end %>
 
   <% end %>
 
