@@ -30,7 +30,7 @@ Classportal::Application.routes.draw do
   get '/login' => 'sessions#new' , as: :login
   #get '/rootadmincreate'=> 'users#new'
   post 'login' => 'sessions#create'
-  delete 'logout' => 'sessions#destroy'
+  delete 'logout' => 'sessions#destroy', as: :logout
 
   get '/user_students'=> 'users#list_students', as: :list_students
   get '/user_instructors' => 'users#list_instructors', as: :list_instructors

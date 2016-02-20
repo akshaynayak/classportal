@@ -22,8 +22,7 @@
         <% if logged_in_user %>
             <%= link_to "Mailbox", conversations_path, class: "item" %>
             <div class="right menu">
-              <%= link_to 'Sign Out', logout_path, class: "item" %>
-            </div>
+             </div>
         <% else %>
             <div class="right menu">
               <%= link_to 'Sign Up', signup_path, class: "item" %>
