@@ -222,6 +222,7 @@
     <orderEntry type="library" scope="PROVIDED" name="activemodel (v4.1.0.beta1@f706d5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activerecord (v4.1.0.beta1@f706d5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="activesupport (v4.1.0.beta1@f706d5, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="addressable (v2.4.0, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="arel (v5.0.1.20140414130214, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt (v3.1.10, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bcrypt-ruby (v3.1.5, ruby-2.1.7-p400) [gem]" level="application" />
@@ -230,17 +231,26 @@
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.4.1, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.10.0, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="daemons (v1.2.3, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="excon (v0.45.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.6.0, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku (v3.42.36, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="heroku-api (v0.3.23, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="hike (v1.2.3, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="i18n (v0.7.0, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jbuilder (v1.5.3, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="jquery-rails (v3.1.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="json (v1.8.3, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="launchy (v2.4.3, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="minitest (v5.8.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.11.2, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-ssh (v2.9.2, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="net-ssh-gateway (v1.2.0, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="netrc (v0.10.3, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="pg (v0.18.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.3, ruby-2.1.7-p400) [gem]" level="application" />
@@ -248,6 +258,8 @@
     <orderEntry type="library" scope="PROVIDED" name="railties (v4.1.0.beta1@f706d5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rake (v10.5.0, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rdoc (v4.2.2, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rest-client (v1.6.8, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="rubyzip (v1.1.7, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass (v3.2.19, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sass-rails (v4.0.5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sdoc (v0.4.1, ruby-2.1.7-p400) [gem]" level="application" />
@@ -256,6 +268,7 @@
     <orderEntry type="library" scope="PROVIDED" name="sprockets (v2.12.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sprockets-rails (v2.0.1, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="sqlite3 (v1.3.11, ruby-2.1.7-p400) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="thin (v1.6.4, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thor (v0.19.1, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="thread_safe (v0.3.5, ruby-2.1.7-p400) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="tilt (v1.4.1, ruby-2.1.7-p400) [gem]" level="application" />

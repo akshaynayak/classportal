@@ -1,0 +1,4 @@
+
+module UserCourseHistoriesHelper
+end
+
