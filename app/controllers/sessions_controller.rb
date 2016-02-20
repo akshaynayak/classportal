@@ -38,7 +38,7 @@ class SessionsController < ApplicationController
     session[:user_id]=nil
     session[:user_email]=nil
     session[:role]=nil
-    redirect_to '/'
+    redirect_to '/login'
   end
 end
 

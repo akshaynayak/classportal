@@ -27,7 +27,7 @@ Classportal::Application.routes.draw do
   #root 'sessions#new'
 
   root 'sessions#new'
-  get '/login' => 'sessions#new'
+  get '/login' => 'sessions#new' , as: :login
   #get '/rootadmincreate'=> 'users#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
