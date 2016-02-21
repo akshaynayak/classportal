@@ -93,10 +93,11 @@ class UsersController < ApplicationController
     @user=User.find_by_id(session[:user_id]) if session[:user_id]
     @my_courses=@user.courses
     @my_enrolled_courses=@user.user_courses.where(:is_enrolled=>true)
-    @my_requested_courses=@user.user_courses.where(:has_requested_enrollment=>true)
+    @my_requested_courses=@user.user_courses.where(:has_requested_enrollment=>true, :is_enrolled=>false)
     @my_course_mappings=@user.user_courses
 
-    @un_enrolled_courses=@courses-@my_courses
+    @un_enrolled_courses=@courses.where(:is_active=>true)-@my_courses.where(:is_active=>true)
+    @inactive_courses=@courses.where(:is_active=>false)
 
   end
 

@@ -61,7 +61,7 @@ class UserCoursesController < ApplicationController
     end
     elsif logged_in_user.is_instructor
       respond_to do |format|
-        format.html { redirect_to user_courses_url }
+        format.html { redirect_to instructor_home_page_url }
         format.json { head :no_content }
       end
     else

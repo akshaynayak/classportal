@@ -29,7 +29,7 @@
 
 
   </div>
-
+  <% if session[:user_id]==@user.id %>
   <div class="field">
 
 
@@ -38,11 +38,12 @@
 
 
   </div>
+        <% end %>
   <% if logged_in_user %>
 
   <div class="field">
 
-    <% if session[:role]!='student' %>
+    <% if session[:role]=='admin' %>
 
     <%= f.label :is_admin %><br>
     <%= f.check_box :is_admin %>
