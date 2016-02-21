@@ -1,5 +1,7 @@
 == README
 
+Please download the README.docx file for user profile details and instructions
+
 Default admin
 Email: root@ncsu.edu	password: root1234
 
