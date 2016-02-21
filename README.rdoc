@@ -139,7 +139,8 @@ Section Header	The students should be able to perform basic actions on the cours
 see if they all work:<br>
 
 checkbox	1) Can a student member search for courses (using course number or title or instructor or description or status)? Yes 
-
+ A student can search for a course by pressing on Show all courses. A search box appears on the next page.
+ 
 checkbox	2) Can a student member view the details of a course? Can a student member view the materials (notifications, 
 deadlines etc.)? yes<br>
 
