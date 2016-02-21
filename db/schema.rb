@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160220054955) do
+ActiveRecord::Schema.define(version: 20160221014138) do
 
   create_table "admins", force: true do |t|
     t.string   "name"
@@ -90,7 +90,10 @@ ActiveRecord::Schema.define(version: 20160220054955) do
     t.integer  "course_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "is_archived",              default: false
   end
+
+  add_index "user_courses", ["is_archived"], name: "index_user_courses_on_is_archived"
 
   create_table "user_courses_history", force: true do |t|
     t.boolean  "is_teaching"

@@ -45,6 +45,8 @@ Classportal::Application.routes.draw do
   get '/student_enrollment_requests' => 'users#student_enrollment_requests', as: :student_enrollment_requests
   get '/enroll_student' => 'users#enroll_student', as: :enroll_student
 
+  get '/make_archived' => 'users#make_archived', as: :make_archived
+
   #get '/add_user_course_rel' =>'users#list_user_course', as: :list_user_courses
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

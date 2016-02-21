@@ -41,7 +41,7 @@
       </thead>
 
       <tbody>
-      <% @my_enrolled_courses.each do |mapping| %>
+      <% @my_currently_enrolled_courses.each do |mapping| %>
           <tr>
 
             <td><%= mapping.course.course_number %></td>
@@ -278,10 +278,10 @@
       </tbody>
     </table>
 
+    
     <br><br>
     <!%= link_to "Show all admins", user_admins_path %><br>
     <%= link_to "Show all courses", courses_path %><br>
-
 
 
 <% else %>
