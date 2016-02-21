@@ -79,6 +79,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_course_params
-      params.require(:user_course).permit(:is_teaching, :is_enrolled, :has_requested_enrollment, :grade, :user_id, :course_id, :is_archived)
+      params.require(:user_course).permit(:is_teaching, :is_enrolled, :has_requested_enrollment, :grade, :user_id, :course_id)
     end
 end
