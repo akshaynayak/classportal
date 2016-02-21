@@ -95,7 +95,7 @@
       <column name="course_id" sqlType="INTEGER" precision="0" scale="-1" nullable="true" jdbcType="4"/>
       <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
-      <column name="is_archived" sqlType="BOOLEAN" precision="0" scale="-1" nullable="true" jdbcType="4"/>
+      <column name="is_archived" sqlType="BOOLEAN" precision="0" scale="-1" nullable="true" jdbcType="4" def="J2Yn"/>
       <primary-key columns="id"/>
       <index name="index_user_courses_on_is_archived" unique="true" columns="is_archived"/>
     </table>
