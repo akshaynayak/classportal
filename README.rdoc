@@ -2,40 +2,45 @@
 
 Please download the README.docx file for user profile details and instructions
 
-Default admin<br>
-Email: root@ncsu.edu	password: root1234<br>
+Default admin
+Email: root@ncsu.edu	password: root1234
 
-Users details<br>
-Role	User email	Password<br>
-Admin 	manisha@ncsu.edu manisha<br>
-Admin	anayakv@ncsu.edu akshay1234<br>
-Admin	krishna@ncsu.edu krishna<br>
-Student	ash@ncsu.edu ashley<br>
-Instructor	sheber@ncsu.edu stefen<br>
-Instructor	stallman@ncsu.edu stallman<br>
-Instructor	chi@ncsu.edu minchi<br>
-Instructor	edg@ncsu.edu gehringer<br>
-Student	kgala@ncsu.edu krunal123<br>
-Instructor	rudra@ncsu.edu rudradutta<br>
-Instructor	bahler@ncsu.edu bahler<br>
-Instructor	mueller@ncsu.edu mueller<br>
+Users details
+
+Role	User email	Password
+Admin 	manisha@ncsu.edu manisha
+Admin	anayakv@ncsu.edu akshay1234
+Admin	krishna@ncsu.edu krishna
+Student	ash@ncsu.edu ashley
+Instructor	sheber@ncsu.edu stefen
+Instructor	stallman@ncsu.edu stallman
+Instructor	chi@ncsu.edu minchi
+Instructor	edg@ncsu.edu gehringer
+Student	kgala@ncsu.edu krunal123
+Instructor	rudra@ncsu.edu rudradutta
+Instructor	bahler@ncsu.edu bahler
+Instructor	mueller@ncsu.edu mueller
 
 
-Functionalities:<br>
-User courses<br>
-Course number	Title	Instructors<br>
-csc 591-003	ADBI	•  nagiza<br>
-csc 517	ood	Gehringer<br>
-csc 505	algorithms	•  stefen heber •  stallman<br>
-csc 501	Operating Systems	Mueller<br>
-csc 522	alda	•  min chi<br>
-csc 520	ai	Bahler<br>
-573	IP	Rudra dutta<br>
+Functionalities:
+User courses
+Course number	Title	Instructors
+csc 591-003	ADBI	•  nagiza
+csc 517	ood	Gehringer
+csc 505	algorithms	•  stefen heber •  stallman
+csc 501	Operating Systems	Mueller
+csc 522	alda	•  min chi
+csc 520	ai	Bahler
+573	IP	Rudra dutta
 
-Functionalities:<br>
-Section Header	Check the basic functionalities for admins below and see if they all work:<br>
-checkbox	1) Can an admin log in? – yes<br>
-checkbox	2) Can (s)he edit profile? –yes<br>
+Functionalities:
+
+Section Header	Check the basic functionalities for admins below and see if they all work:
+
+checkbox	1) Can an admin log in? – yes
+
+checkbox	2) Can (s)he edit profile? –yes
+
 checkbox	3) Can (s)he log out?- yes<br>
 criterion	Please point out if any of those does not work or is missing from the reviewed system.<br>
 Are these functionalities fully and correctly implemented?<br>
