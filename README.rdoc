@@ -104,7 +104,7 @@ Are these functionalities fully and correctly implemented?
 
 Section Header	Admin should be able to add/remove students or instructor, add material or post grades on behalf of an instructor. Check the functionalities for admin below and see if they all work:
 
-checkbox	1) Can an admin add/remove students?  Yes
+checkbox	1) Can an admin add/remove students?  Yes by pressing on create a new admin/instructor and not leaving both is_instructor and is_student unchecked.
 
 checkbox	2) Can an admin add/remove an instructor? Can there be many instructors? Is there warning if a course has no instructor? 
 
