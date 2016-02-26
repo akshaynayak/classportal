@@ -23,9 +23,9 @@
   <tbody>
     <% @user_courses.each do |user_course| %>
       <tr>
-        <td><%= user_course.user_id %></td>
+        <td><%= user_course.user.name %></td>
 
-        <td><%= user_course.course_id %></td>
+        <td><%= user_course.course.title %></td>
 
         <td><%= user_course.is_teaching %></td>
 

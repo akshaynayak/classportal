@@ -47,6 +47,8 @@ Classportal::Application.routes.draw do
 
   get '/make_archived' => 'users#make_archived', as: :make_archived
 
+  get '/manage_course_users' =>'courses#manage_course_users', as: :manage_course_users
+
   #get '/add_user_course_rel' =>'users#list_user_course', as: :list_user_courses
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

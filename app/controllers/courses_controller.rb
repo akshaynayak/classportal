@@ -61,7 +61,7 @@ class CoursesController < ApplicationController
 
     respond_to do |format|
       if @course.save
-        format.html { redirect_to @course, notice: 'Course was successfully created. Warning no instructor currently assigned. Add instructor by going to Manage user courses tab on admin home page' }
+        format.html { redirect_to @course, notice: 'Course added. Warning no Instructor assigned. Go to the manage user history tab and add instructor'  }
         format.json { render action: 'show', status: :created, location: @course }
       else
         format.html { render action: 'new' }
@@ -94,7 +94,13 @@ class CoursesController < ApplicationController
     end
   end
 
+  def manage_course_users
+    @course=params[:course]
+    @course_name=Course.find(@course).course_number
+    @instructors_courses=UserCourse.where(:course_id => @course, :is_teaching => true)
+    @student_courses=UserCourse.where(:course_id => @course, :is_teaching => false)
 
+  end
 
 
 
