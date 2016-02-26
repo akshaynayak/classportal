@@ -31,6 +31,7 @@
       <column name="deadlines" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="created_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <column name="updated_at" sqlType="DATETIME" precision="0" scale="-1" nullable="true" jdbcType="12"/>
+      <column name="material" sqlType="TEXT" precision="0" scale="-1" nullable="true" jdbcType="12"/>
       <primary-key columns="id"/>
       <index name="index_courses_on_course_number" unique="true" columns="course_number"/>
     </table>

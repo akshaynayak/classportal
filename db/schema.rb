@@ -11,8 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160221014138) do
+ActiveRecord::Schema.define(version: 20160226173144) do
 
+  create_table "admins", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+  end
 
   create_table "conversations", force: true do |t|
     t.integer "sender_id"
@@ -30,10 +37,18 @@ ActiveRecord::Schema.define(version: 20160221014138) do
     t.text     "deadlines"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "material"
   end
 
   add_index "courses", ["course_number"], name: "index_courses_on_course_number", unique: true
 
+  create_table "instructors", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+  end
 
   create_table "messages", force: true do |t|
     t.text     "body"
@@ -48,6 +63,13 @@ ActiveRecord::Schema.define(version: 20160221014138) do
   add_index "messages", ["conversation_id"], name: "index_messages_on_conversation_id"
   add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
+  create_table "students", force: true do |t|
+    t.string   "name"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "password_digest"
+  end
 
   create_table "user_course_histories", force: true do |t|
     t.boolean  "is_teaching"
@@ -74,6 +96,16 @@ ActiveRecord::Schema.define(version: 20160221014138) do
 
   add_index "user_courses", ["is_archived"], name: "index_user_courses_on_is_archived"
 
+  create_table "user_courses_history", force: true do |t|
+    t.boolean  "is_teaching"
+    t.boolean  "is_enrolled"
+    t.boolean  "has_requested_enrollment"
+    t.string   "grade"
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name"

@@ -49,6 +49,12 @@
 </p>
 
 <p>
+  <strong>Material:</strong>
+  <%= @course.material %>
+</p>
+
+
+<p>
   <strong>Instructor:</strong>
 <% @course.users.each do |user| %>
     <% if user.is_instructor %>
