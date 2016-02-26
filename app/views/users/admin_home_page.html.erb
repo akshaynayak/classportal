@@ -12,7 +12,7 @@
 
     <h1>Listing admins</h1>
 
-    <table>
+    <table border="1", cellpadding="7">
       <thead>
       <tr>
 
@@ -41,7 +41,6 @@
             <td><%= admin.is_instructor %></td>
 
             <td><%= link_to 'Show', admin %></td>
-            <td><!%= link_to 'Edit', edit_user_path(admin) %></td>
             <% if admin!=logged_in_user && admin.id!=1 %>
             <td><%= link_to 'Destroy', admin, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             <% end %>

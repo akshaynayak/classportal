@@ -3,7 +3,10 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @course %> |
-<%= link_to 'Back', courses_path %>
+
+<% if session[:role]=="admin" %>
+    <%= link_to 'Back to admin home page', admin_home_page_path %>
+<% end %>
 
 
 <% if logged_in_user.is_admin==false and logged_in_user.is_instructor==false %>

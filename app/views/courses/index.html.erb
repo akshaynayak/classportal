@@ -46,9 +46,11 @@
         <% end %>
         </td>
 
-        <% if logged_in_user.is_admin %>
         <td><%= link_to 'Go to course page', course %></td>
-            <td><%= link_to 'Edit', edit_course_path(course) %></td>
+        <% if session[:role]=="admin" %>
+
+      <td><%= link_to 'Edit', edit_course_path(course) %></td>
+
             <td><%= link_to 'Manage students and instructors for this course', :action=>:manage_course_users , :course=>course %></td>
             <td><%= link_to 'Destroy', course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
