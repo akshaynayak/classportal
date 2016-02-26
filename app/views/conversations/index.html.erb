@@ -5,7 +5,7 @@
     <div class="item">
       <% @conversations.each do |conversation| %>
           <% if conversation.sender_id == logged_in_user.id || conversation.receiver_id == logged_in_user.id %>
-              <% if User.find(conversation.sender_id) && User.find(conversation.receiver_id)%>
+              <% if User.exists?(conversation.sender_id) && User.exists?(conversation.receiver_id)%>
               <% if conversation.sender_id == logged_in_user.id %>
                   <% receiver = User.find(conversation.receiver_id) %>
               <% else %>
