@@ -22,6 +22,8 @@
 
   <tbody>
     <% @user_courses.each do |user_course| %>
+
+      <%if user_course.user && user_course.course%>
       <tr>
         <td><%= user_course.user.name %></td>
 
@@ -39,6 +41,7 @@
         <td><%= link_to 'Edit', edit_user_course_path(user_course) %></td>
         <td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
