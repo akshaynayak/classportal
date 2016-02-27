@@ -1,173 +1,59 @@
-== README
-
-Please download the README.docx file for user profile details and instructions
-
-Default admin
-
-Email: root@ncsu.edu	password: root1234
-
-Users details
-
-Role	User email	Password
-
-Admin 	manisha@ncsu.edu manisha
-
-Admin	anayakv@ncsu.edu akshay1234
-
-Admin	krishna@ncsu.edu krishna
-
-Student	ash@ncsu.edu ashley
-
-Instructor	sheber@ncsu.edu stefen
-
-Instructor	stallman@ncsu.edu stallman
-
-Instructor	chi@ncsu.edu minchi
-
-Instructor	edg@ncsu.edu gehringer
-
-Student	kgala@ncsu.edu krunal123
-
-Instructor	rudra@ncsu.edu rudradutta
-
-Instructor	bahler@ncsu.edu bahler
-
-Instructor	mueller@ncsu.edu mueller
-
-
-Functionalities:
-
-User courses
-
-Course number	Title	Instructors
-
-csc 591-003	ADBI	•  nagiza
-
-csc 517	ood	Gehringer
-
-csc 505	algorithms	•  stefen heber •  stallman
-
-csc 501	Operating Systems	Mueller
-
-csc 522	alda	•  min chi
-
-csc 520	ai	Bahler
-
-573	IP	Rudra dutta
-
-
-Functionalities:
-
-Section Header	Check the basic functionalities for admins below and see if they all work:
-
-checkbox	1) Can an admin log in? – yes
-
-checkbox	2) Can (s)he edit profile? –yes
-
-checkbox	3) Can (s)he log out?- yes
-
-criterion	Please point out if any of those does not work or is missing from the reviewed system.
-
-Are these functionalities fully and correctly implemented?
-
-Section Header	Admins should have higher authoritiy than ordinary members. Check the functionalities for admin below and see if they 
-all work: 
-
-checkbox	1) Can an admin create other admins? – yes
-
-checkbox	2) Can an admin view the list of other admins? –yes
-
-checkbox	3) Can an admin view the details (except password) of another admin? – yes
-
-checkbox	4) Can an admin delete admins other than himself and the preconfigured admin? Yes
-
-criterion	Please point out if any of those does not work or is missing from the reviewed system.
-
-Are these functionalities fully and correctly implemented?
-
-Section Header	Admin should be able to view and edit the profiles of courses. Check the functionalities for admin below and see if they all work: 
-
-checkbox	1) Can an admin add courses? –yes<br>
-
-checkbox	2) Can an admin view the list of all the courses? –yes<br>
-
-checkbox	3) Can an admin view the details (course number, title, description, instructor, start date, end date, status) of a 
-course?  Yes
-
-checkbox	4) Can an admin edit the details of a course? Yes
-
-checkbox	5) Can an admin delete a course? Yes
-
-criterion	Please point out if any of those does not work or is missing from the reviewed system. 
-
-Are these functionalities fully and correctly implemented?
-
-Section Header	Admin should be able to add/remove students or instructor, add material or post grades on behalf of an instructor. Check the functionalities for admin below and see if they all work:
-
-checkbox	1) Can an admin add/remove students?  Yes by pressing on create a new admin/instructor and not leaving both is_instructor and is_student unchecked.
-
-checkbox	2) Can an admin add/remove an instructor? Can there be many instructors? Is there warning if a course has no instructor? 
-
-Yes while creating a new course a warning is generated that no instructor is currently assigned to it.. The admin can add an instructor to the course from his home page by clicking on the Show User Course History => Add New User course => then select the user and course and check is_teaching
-
-checkbox	3) Can an admin add material or grades to a course? Yes
-
-checkbox	4) Can an admin view the list of other users and their profile? Yes<br>
-
-checkbox	5) Can an admin view the history of a user? Yes by clicking on user course history<br>
-
-checkbox	6) Can an admin delete a user?  Yes<br>
-
-criterion	Please point out if any of those does not work or is missing from the reviewed system. <br>
-
-Are these functionalities fully and correctly implemented?<br>
-Section Header	This project should support the basic functionalities for students. Check the functionalities for students below and see if they all work:
-
-checkbox	1) Can a user sign up to become a student? Yes
-
-checkbox	2) Can (s)he log in with email and password after signing up? Yes<br>
-
-checkbox	3) Can (s)he edit his/her profile? Yes<br>
-
-checkbox	4) Can (s)he log out? yes<br>
-
-criterion	Please point out if any of those does not work or is missing from the reviewed system. <br>
-
-Are these functionalities fully and correctly implemented?<br>
-
-Section Header	The students should be able to perform basic actions on the courses. Check the functionalities for students below and 
-see if they all work:<br>
-
-checkbox	1) Can a student member search for courses (using course number or title or instructor or description or status)? Yes 
- A student can search for a course by pressing on Show all courses. A search box appears on the next page.
- 
-checkbox	2) Can a student member view the details of a course? Can a student member view the materials (notifications, 
-deadlines etc.)? yes<br>
-
-checkbox	3) Can a student request enrollment in a course? Yes<br>
-
-checkbox	4) Can a student drop a course? Yes<br>
-
-checkbox	5) Can a student view his/her own course history? yes<br>
-
-criterion	Please point out if any of those does not work or is missing from the reviewed system.<br> 
-
-Are these functionalities fully and correctly implemented?<br>
-
-Section Header	The Instructors should be able to perform more actions on the courses. Check the functionalities for Instructors below and see if they all work:<br>
-
-checkbox	1) Can an instructor add a student to the course by approving his/her enrollment request? Yes <br>
-By clicking on “manage course requests and student grades” from his home page<br>
-
-checkbox	2) Can an instructor remove a student from course?  Yes<br>
-By clicking on “manage course requests and student grades”=> He can destroy the request or edit the request by pressing on the edit button.<br>
-
-He should however check the student who has requested enrollment by pressing the edit button so that he doesn’t delete himself. <br>
-checkbox	3) Can an instructor add material to course (notifications, deadlines etc.)?<br>
-	Yes<br>
-
-
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+# ClassPortal
+Created by 
+- Harsha Kunapareddy( skunapa)
+- Harini Reddy Kumbum (hkumbum)
+- Yuvraj Singh Rathore (yrathor)
+
+<b>Pre-configured Admin and User Details:</b>
+<table border=1>
+	<th> Role </th>
+	<th> Name </th>
+	<th> Email ID </th>
+	<th> Password </th>
+	<tr> <td> Super Admin <td> Harsha <td>skunapa@ncsu.edu <td> 1234</tr>
+	<tr> <td> Admin <td> Harini <td>hkumbam@ncsu.edu <td> 1234</tr>
+	<tr> <td> Admin <td> Yuvraj <td>yrathor@ncsu.edu <td> 1234</tr>
+	<tr> <td> Student <td> Jaithrik <td>jbollab@ncsu.edu <td> 1234</tr>
+	<tr> <td> Instructor <td> Dr. Edward Gehringer <td>edg@ncsu.edu <td> 1234</tr>
+	<tr> <td> Instructor <td> Dr. Steffen Heber <td>heber@ncsu.edu <td> 1234</tr>
+	<tr> <td> Student <td> Anush <td>abonam@ncsu.edu <td> 1234</tr>
+	<tr> <td> Student <td> Dheeraj <td>rnagaru@ncsu.edu <td> 1234</tr>
+
+</table>
+
+There are three types of users in the system: Admin, Instructor and Student.
+
+Below are the tasks that can be performed by each user type
+
+<b> Admin </b>
+- Edit profile
+	* Click on Edit Profile tab, change the details and click on Update User
+- Manage Users
+	* Click on Search users tab. You can view, edit and delete the users
+	* Click on Add User tab to add users
+- Manage Courses
+	* Click on Search Courses tab. Below actions can be performed
+		* Show - Details of the course can be seen.
+		* Enroll Requests - List of students who have requested for enrollement can be seen
+		* View Students - List of students enrolled for the course can be seen.
+		* Edit - To edit the course details
+		* Delete - To delete the course
+	* Click on Add Course tab to create new courses. Instructor has to be selected while creating a course.
+	
+<b> Instructor </b>
+- Edit profile
+	* Click on Edit Profile tab, change the details and click on Update User
+- Approve Enrollement Request
+	* Click on My Courses tab. Click on Enroll Requests corresponding to the course and Accept/Reject the request.
+- Add Material
+	* Click on My Courses tab. Click on Announcements corresponding to the course and Add a new Announcement.
+	
+<b> Student </b>
+- Edit profile
+	* Click on Edit Profile tab, change the details and click on Update User
+- Search Courses
+	* Click on Search courses. Search using any of the fields. Click on Show to view the details of the course.
+- Request Enrollement
+	* Click on Search courses. Click on Enroll corresponding to the required course. Requested courses can be viewed in My courses tab with Status "Requested"
+- Course history
+	* Click on My courses tab to view the current and past courses. Student can drop a current course by clicking on "Drop" corresponding to the course.
