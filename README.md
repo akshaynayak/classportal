@@ -35,4 +35,4 @@ Below are the tasks that can be performed by each user type
 	* Click on Browse and Search courses at the bottom of the page. Search using any of the fields. Click on Search to view the details of the course.
 - Request Enrollement
 	* Click on Search courses. Click on Enroll corresponding to the required course. 
-- Course history
+
