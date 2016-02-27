@@ -41,7 +41,7 @@
       </thead>
 
       <tbody>
-      <% unless @my_currently_enrolled_courses.nil? %>
+
       <% @my_currently_enrolled_courses.each do |mapping| %>
 
           <tr>
@@ -75,7 +75,7 @@
 
             <td><%= link_to 'Drop course', mapping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
-        <% end %>
+
       <% end %>
       </tbody>
     </table>
@@ -114,9 +114,8 @@
       </thead>
 
       <tbody border="2">
-      <% unless @my_requested_courses.nil? %>
       <% @my_requested_courses.each do |mapping| %>
-          <tr>
+              <tr>
 
             <td><%= mapping.course.course_number %></td>
 
@@ -141,12 +140,13 @@
                       <li><%= user.name %></li>
                   <% end %>
               <% end %>
+
             </td>
             <td><%= mapping.grade %></td>
             <td><%= link_to 'Show course', course_path(mapping.course) %></td>
+            <td><%= link_to 'Drop course', mapping, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 
-          </tr>
-      <% end %>
+              </tr>
       <% end %>
 
       </tbody>
