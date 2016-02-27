@@ -41,7 +41,9 @@
       </thead>
 
       <tbody>
-
+      <% if !@my_currently_enrolled_courses.present? || @my_currently_enrolled_courses.empty? %>
+      <% %>
+          <% else %>
       <% @my_currently_enrolled_courses.each do |mapping| %>
 
           <tr>
@@ -77,6 +79,7 @@
           </tr>
 
       <% end %>
+          <% end %>
       </tbody>
     </table>
 
@@ -114,6 +117,10 @@
       </thead>
 
       <tbody border="2">
+      <% if !@my_requested_courses.present? || @my_requested_courses.empty? %>
+          <% %>
+      <% else %>
+
       <% @my_requested_courses.each do |mapping| %>
               <tr>
 
@@ -148,7 +155,7 @@
 
               </tr>
       <% end %>
-
+      <% end %>
       </tbody>
     </table>
 
