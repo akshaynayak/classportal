@@ -2,56 +2,17 @@
 
 
 one:
-
-
   name: MyString
-
-
-
-
   email: MyString
-
-
-
-
   password: MyString
-
-
-
-
   is_admin: false
-
-
-
-
   is_instructor: false
 
-
-
-
 two:
-
-
   name: MyString
-
-
-
-
   email: MyString
-
-
-
-
   password: MyString
-
-
-
-
   is_admin: false
-
-
-
-
   is_instructor: false
 
 

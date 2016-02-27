@@ -2,86 +2,24 @@
 
 
 one:
-
-
   course_number: MyString
-
-
-
-
   title: MyString
-
-
-
-
   description: MyText
-
-
-
-
   start_date: 2016-02-17
-
-
-
-
   end_date: 2016-02-17
-
-
-
-
   is_active: false
-
-
-
-
   notifications: MyText
-
-
-
-
   deadlines: MyText
 
 
-
-
 two:
-
-
   course_number: MyString
-
-
-
-
   title: MyString
-
-
-
-
   description: MyText
-
-
-
-
   start_date: 2016-02-17
-
-
-
-
   end_date: 2016-02-17
-
-
-
-
   is_active: false
-
-
-
-
   notifications: MyText
-
-
-
-
   deadlines: MyText
 
 
