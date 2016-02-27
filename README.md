@@ -37,5 +37,4 @@ Below are the tasks that can be performed by each user type
 	* Click on Search courses. Click on Enroll corresponding to the required course. 
 
 <b>
-Locally we are able to add students. However on Heroku its returning an error that a method is being invoked on nil class.
 Mailbox functionality is also working locally.</b>
