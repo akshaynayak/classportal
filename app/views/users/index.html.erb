@@ -42,7 +42,7 @@
         <td><%= user.is_instructor %></td>
 
         <td><%= link_to 'Show', user %></td>
-        <!--td><!%= link_to 'Edit', edit_user_path(user) %></td-->
+        <td><%= link_to 'Show history', :action=>:show_history,:user=>user %></td>
         <% if user!=logged_in_user && user.id!=1 %>
             <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       <% end %>

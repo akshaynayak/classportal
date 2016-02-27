@@ -67,7 +67,7 @@ class UsersController < ApplicationController
     if logged_in_user.is_admin
       @admins=User.where(:is_admin=>true)
     else
-      flash[:notice] = "not enough rights !"
+      flash[:notice] = "not enough rights!"
       redirect_to '/login'
     end
   end
@@ -139,7 +139,9 @@ class UsersController < ApplicationController
 
   end
 
-  def enroll
+  def show_history
+    @user=User.find(params[:user])
+    @user_courses=@user.user_courses
   end
 
     private

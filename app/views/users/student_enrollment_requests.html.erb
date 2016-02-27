@@ -22,10 +22,11 @@
 
   <tbody>
   <% @students_enrollment_requests.each do |user_course| %>
+      <% if user_course.is_teaching==false %>
       <tr>
-        <td><%= user_course.user_id %></td>
+        <td><%= user_course.user.name %></td>
 
-        <td><%= user_course.course_id %></td>
+        <td><%= user_course.course.course_number %></td>
 
         <td><%= user_course.is_teaching %></td>
 
@@ -39,6 +40,7 @@
         <td><%= link_to 'Edit', edit_user_course_path(user_course) %></td>
         <td><%= link_to 'Destroy', user_course, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+  <% end %>
   <% end %>
   </tbody>
 </table>
